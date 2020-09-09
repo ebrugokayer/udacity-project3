@@ -5,13 +5,13 @@ import { IndexRouter } from './controllers/v0/index.router';
 
 import bodyParser from 'body-parser';
 
-
+import { V0MODELS } from './controllers/v0/model.index';
 import { config } from './config/config';
 
 const c = config.dev;
 
 (async () => {
-  // await sequelize.addModels(V0MODELS);
+  await sequelize.addModels(V0MODELS);
   await sequelize.sync();
 
   const app = express();
