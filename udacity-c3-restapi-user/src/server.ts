@@ -11,7 +11,7 @@ import { config } from './config/config';
 const c = config.dev;
 
 (async () => {
-  await sequelize.addModels(V0MODELS);
+  // await sequelize.addModels(V0MODELS);
   await sequelize.sync();
 
   const app = express();
